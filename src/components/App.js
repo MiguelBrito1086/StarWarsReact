@@ -3,10 +3,6 @@ import "../styles/App.css"
 import Vehicles from './Vehicles'
 
 class App extends Component {
-  // PROPS AND STATE
-  // Set props and state below.
-  // You should set state for vehicles (empty array), value (empty string), pilot (empty) string.
-  // Enter your code below:
   constructor(props) {
     super(props)
 
@@ -17,23 +13,11 @@ class App extends Component {
     }
   }
 
-  // FORM: HANDLE INPUT CHANGES
-  // handleNameChange below:
-  // See form lesson for details.
-  // Enter your code below:
-
   _nameChange = event => {
     this.setState({
       pilot: event.target.value
     })
   }
-
-  //  FORM: SUBMIT METHOD
-  // handleSubmit below:
-  // See form lesson for details.
-  // Once the form is sumbited, two things need to happen: set the state of pilot to the input value.
-  // Then, set the value of the input back to an empty string.
-  // Enter your code below:
 
   _submit = event => {
     event.preventDefault()
@@ -71,6 +55,7 @@ class App extends Component {
           <div className="container">
             <div className="jumbotron">
               <h1>Star Wars Ships</h1>
+              <p>The Vehicles of Star Wars</p>
             </div>
             <div>
               <form onSubmit={this._submit} className="form">
