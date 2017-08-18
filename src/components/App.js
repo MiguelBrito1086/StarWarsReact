@@ -73,7 +73,7 @@ class App extends Component {
               <h1>Star Wars Ships</h1>
             </div>
             <div>
-              <form className="form">
+              <form onSubmit={this._submit} className="form">
                 <label>
                   <p>What's your name pilot?</p>
                   <input
@@ -83,10 +83,12 @@ class App extends Component {
                     value={this.state.pilot}
                   />
                 </label>
-                <p>Welcome {this.state.pilot}</p>
+                <p>Welcome {this.state.pilot}, you're needed at your station immediately.</p>
               </form>
             </div>
-            <Vehicles />
+            <div>
+              <Vehicles />
+            </div>
           </div>
         </div>
     )

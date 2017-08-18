@@ -4,6 +4,8 @@
 
 .card{
   margin: 5px;
+  display: flex;
+  flex-grow: row wrap;
 }
 
 .form{
